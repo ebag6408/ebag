@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+	<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Xanh+Mono:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<!-- 
+    font-family: 'Playfair Display', serif;
+    font-family: 'Alegreya Sans', sans-serif;
+    font-family: 'Xanh Mono', monospace;
+    font-family: 'Work Sans', sans-serif;
+-->
+    <title>fourseasons</title>
+    <!-- 
+        메인 컬러
+        rgb(245, 246, 242)
+        rgb(231, 230, 220)
+        rgb(204, 195, 182)
+        rgb(189, 182, 170)
+        rgb(133, 131, 123)
+    -->
+    <link rel="stylesheet" href="com.css">
+	<!-- <link rel="stylesheet" href="index.css">   -->
+    <style>
+
+/* 111111111111 */
+    .section1{padding-top:110px}
+    .section1 .section-title{}
+    .section1 .container{
+    display: flex;
+    gap:30px;
+    }
+    .section1 .left{width:50%;}
+    .section1 .right{width:50%;}
+    .section1 .item{overflow: hidden;
+    margin-bottom: 30px;
+    }
+    .section1 .item img{width:100%;transition: 1s;}
+    .section1 .item:hover img{transform: scale(1.1);}
+    .section1 .item .text-box{
+        height: 100px;
+        padding: 20px;
+        color: white;
+        background-color: var(--eight);}
+
+    .section1 .item h6{
+    font-size: 14px;font-weight: 800;}
+    .section1 .item p{font-size: 12px;}
+
+    .section1 .item1 img{height:808px;object-fit: cover;}
+    .section1 .item2 img{height: 580px;object-fit: cover;}
+    .section1 .item3 img{height: 560px;object-fit: cover;}
+    .section1 .item4 img{height:808px;object-fit: cover;}
+
+
+
+@media(max-width:800px){
+    .section1 .container{display: block;}
+    .section1 .left{width:100%;}
+    .section1 .right{width:100%;}
+    .section1 .item img{
+        height:100%;
+        object-fit: cover;
+        object-position: center top;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <div class="top-btn">top</div>
+    <header>
+        <div class="logo">
+            <a href="index.html"><img src="img/header-logo.png" alt=""></a>
+        </div>
+        <ul class="gnb">
+            <li class="gnb-li"><a href="index.html">summary</a></li>
+            <li class="gnb-li"><a href="1-guestroom.html">guest room</a></li>
+            <li class="gnb-li"><a href="2-dining.html">dining</a></li>
+            <li class="gnb-li"><a href="3-spa.html">spa</a></li>
+            <li class="gnb-li"><a href="4-apathtovisit.html">a path to visit</a></li>
+        </ul>
+        <div class="right">
+            <div class="ham-btn">
+                <div class="bar bar1"></div>
+                <div class="bar bar2"></div>
+                <div class="bar bar3"></div>
+                <ul class="sub">
+                    <li class="sub-li"><a href="index.html">summary</a></li>
+                    <li class="sub-li"><a href="1-guestroom.html">guest room</a></li>
+                    <li class="sub-li"><a href="2-dining.html">dining</a></li>
+                    <li class="sub-li"><a href="3-spa.html">spa</a></li>
+                    <li class="sub-li"><a href="4-apathtovisit.html">a path to visit</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <section class="sub-main">
+        <div class="img-box">
+            <img src="img/main-dining.jpg">
+            <div class="bg">
+                <div class="text-box">
+                    <h1>dining</h1>
+                </div></div>
+        </div>
+    </section>
+    <section class="section1">
+        <div class="section-title">
+            <h1>dining</h1>
+        </div>
+        <div class="container">
+            <div class="left">
+                <div class="item item1">
+                    <img src="img/d2-1.png">
+                    <div class="text-box">
+                        <h6>룸서비스</h6>
+                        <p>객실에서 아늑하게 로맨틱한 디너를 즐기고 싶을 때, 갑작스러운 회의를 주최해야 할 때, 또는 저녁 시간에 조용하고 편안한 휴식이 필요할 때, 다양한 메뉴의 룸서비스를 언제든지 준비합니다.</p>
+                    </div>
+                </div>
+                <div class="item item2">
+                    <img src="img/d2-2.jpg">
+                    <div class="text-box">
+                        <h6>더 가든 테라스</h6>
+                        <p>올 여름에는 포시즌스의 야외 테라스에서 서울의 매력적인 도심 전망을 배경으로, 최고급 정통 멕시칸 요리와 칵테일을 즐겨 보세요.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="right">
+                <div class="item item3">
+                    <img src="img/d2-3.jpg">
+                    <div class="text-box">
+                        <h6>오울</h6>
+                        <p>‘오울 (OUL)’은 서울의 다이내믹한 밤을 오마주하여 도시의 전통, 근대, 현대를 표방한 다양한 메뉴를 선보입니다. 세계적 수준의 세프들이 엄선한 한국 식재료를 활용하여 현대적으로 재해석한 전통 소울 푸드와 한국 칵테일을 만나보실 수 있습니다.</p>
+                    </div>
+                </div>
+                <div class="item item4">
+                    <img src="img/d2-4.png">
+                    <div class="text-box">
+                        <h6>유유안</h6>
+                        <p>광동식 중식당 유유안이 서울의 중심에서 1920년대 상하이의 낭만을 재현합니다. 총괄 셰프 쿠 콱 페이의 정통 레시피와 지역 제철 식재료를 사용한 독특한 요리로 황홀한 미식을 경험해 보시기 바랍니다.</p>
+    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <footer class="footer1">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html"><img src="img/footer-logo.png"></a>
+            </div>
+            <div class="item-box">
+                <div class="item item1">
+                    <ul>
+                        <li>소개</li>
+                        <li><a href="#">포시즌스에 대하여</a></li>
+                        <li><a href="#">포시즌스 채용</a></li>
+                        <li><a href="#">연락처</a></li>
+                    </ul>
+                </div>
+                <div class="item item2">
+                        <li>예약</li>
+                        <li><a href="#">송장 요청</a></li>
+                        <li><a href="#">예약 확인</a></li>
+                        <li><a href="#">연회 & 이벤트</a></li>
+                </div>
+                <div class="item item3">
+                        <li>최신 소식</li>
+                        <li><a href="#">포시즌스 프레스룸</a></li>
+                        <li><a href="#">포시즌스 매거진</a></li>
+                </div>
+                <div class="item item4">
+                        <li>더보기</li>
+                        <li><a href="#">레지던스 찾기</a></li>
+                        <li><a href="#">기프트 카드 구매</a></li>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <footer class="footer2">
+        <div class="container">
+            <div class="item item1">
+                <div class="icon-box">
+                    <a href="#"><img src="img/icon-twit.png"></a>
+                    <a href="#"><img src="img/icon-face.png"></a>
+                    <a href="#"><img src="img/icon-insta.png"></a>
+                    <a href="#"><img src="img/icon-youtube.png"></a>
+                </div>
+                <div class="text-box">
+                    <select class="lang" placeholder="">
+                        <option >한국어</option>
+                        <option >영어</option>
+                    </select>
+                </div>
+            </div>
+            <div class="item item2">
+                <ul class="shop-menu1">
+                    <li><a href="#">법적고지</a></li>
+                    <li><a href="#">개인정보 취급방침</a></li>
+                    <li><a href="#">쿠키 환경설정</a></li>
+                    <li><a href="#">접근성 정책</a></li>
+                </ul>
+                <ul class="shop-menu2">
+                    <li>ⓒFour Seasons Hotels Limited 1997-2022. All Rights Reserved</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+<script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+<script>
+    
+    var sc_top
+    header()
+    $(window).scroll(function(){
+        header()
+    })
+    function header(){
+        sc_top=$(window).scrollTop()
+        console.log(sc_top)
+        if(sc_top>100){
+            $("header").addClass("s-down")
+        }else{
+            $("header").removeClass("s-down")
+        }
+    }
+    
+    $(".ham-btn").click(function(){
+        $("header").toggleClass("on")
+    })
+    var sc_top
+    btn_top()
+    $(window).scroll(function(){
+        btn_top()
+    })
+    function btn_top(){
+        sc_top = $(window).scrollTop()
+        console.log("스크롤탑: "+ sc_top)
+        if(sc_top < 100){
+            $(".top-btn").css({opacity:0})
+        }else{
+            $(".top-btn").css({opacity:1})
+        }
+    }
+    $(".top-btn").click(function(){
+        $("html,body").stop().animate({scrollTop:0})
+    })
+</script>
+
+</html>
