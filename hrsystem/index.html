@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HR 대시보드</title>
+    <link rel="stylesheet" href="assets/css/index.css" />
+    <link rel="stylesheet" href="assets/css/com.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <!-- 사이드바 -->
+      <div class="sidebar">
+        <div class="sidebar_item">
+          <aside class="sidebar_box">
+            <h2>Logo</h2>
+            <div class="user">
+              <div class="user-info">
+                <div class="user-img">
+                  <img src="assets/images/mail.png" alt="" />
+                </div>
+                <div class="user-text">
+                  <p>Name:<span>MIMI</span></p>
+                  <p>Team:<span>Developer</span></p>
+                  <p>Phone:<span>010-1234-5678</span></p>
+                </div>
+              </div>
+            </div>
+            <div class="menu">
+              <nav>
+                <ul>
+                  <li><a href="index.html">Dashboard</a></li>
+                  <li><a href="#">프로필</a></li>
+                  <li><a href="#">연차 관리</a></li>
+                  <li><a href="#">근태 관리</a></li>
+                  <li><a href="#">급여 명세</a></li>
+                </ul>
+              </nav>
+              <div class="settings">
+                <p>⚙️ Setting</p>
+                <p>🔓 Logout</p>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+      <main>
+        <header class="top-bar">
+          <div class="header-text">
+            <h2>Good morning, <span>mimi</span></h2>
+          </div>
+          <div class="user-icon">
+            <div class="icons">
+              <span><i class="ri-notification-4-line"></i></span>
+              <span><i class="ri-calendar-line"></i></span>
+              <span><i class="ri-user-6-line"></i></span>
+            </div>
+          </div>
+        </header>
+        <!-- 메인 콘텐츠 -->
+        <div class="main-content">
+          <div class="dashboard-grid">
+            <div class="cards">
+              <!-- 개인 근태 현황 카드 -->
+              <div class="card">
+                <div class="widget">
+                  <div class="widget-header">
+                    <h3>근태기록</h3>
+                  </div>
+                  <div class="widget-attendance">
+                    <div class="attendance-text">
+                      <p>출근 시간: <strong>09:00</strong></p>
+                      <p>퇴근 시간: <strong>18:00</strong></p>
+                      <p>총 근무 시간: <strong>8시간</strong></p>
+                    </div>
+                    <div class="progress-bar">
+                      <div class="progress">75%</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- 이번 달 급여 명세 위젯 -->
+              <div class="card">
+                <div class="widget">
+                  <div class="widget-header">
+                    <h3></h3>
+                  </div>
+                  <div class="widget-salary">
+                    <p>총 지급액: <strong>3,000,000원</strong></p>
+                    <p>공제액: <strong>500,000원</strong></p>
+                    <p>실수령액: <strong>2,500,000원</strong></p>
+                  </div>
+                </div>
+              </div>
+              <!-- 휴가 관리 카드 -->
+              <div class="card">
+                <div class="widget">
+                  <div class="widget-header">
+                    <h3>연차기록</h3>
+                  </div>
+                  <div class="widget-leave-status">
+                    <div class="chart-container">
+                      <canvas id="doughnutChart"></canvas>
+                    </div>
+                  </div>
+
+                  <p>총 연차: 15일 | 사용: 10일 | 남은: 5일</p>
+                </div>
+              </div>
+
+              <!-- 진행 중인 업무 / 할 일 위젯 -->
+              <div class="card">
+                <div class="widget">
+                  <div class="widget-header">
+                    <h3>진행중인 업무, 할 일</h3>
+                  </div>
+                  <div class="widget-todo">
+                    <ul>
+                      <li>
+                        <input type="checkbox" id="task1" />
+                        <label for="task1">보고서 작성 (60% 완료)</label>
+                      </li>
+                      <li>
+                        <input type="checkbox" id="task2" />
+                        <label for="task2">월간 회의 준비</label>
+                      </li>
+                      <li>
+                        <input type="checkbox" id="task3" />
+                        <label for="task3">프로젝트 검토</label>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <!-- 공지사항 & 알림 위젯 -->
+              <div class="card">
+                <div class="widget">
+                  <div class="widget-header">
+                    <h3>공지사항, 알림</h3>
+                  </div>
+                  <div class="widget-announcement">
+                    <div class="announcement">
+                      <p><strong>📢 3월 1일 휴무 안내</strong></p>
+                    </div>
+                    <div class="announcement">
+                      <p><strong>🔔 휴가 승인 완료 (4/10~4/12)</strong></p>
+                    </div>
+                    <div class="announcement">
+                      <p><strong>💡 보안 교육 안내</strong></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- 개인 목표 및 성과 피드백 카드 -->
+              <div class="card">
+                <div class="widget">
+                  <div class="widget-header">
+                    <h3>성과</h3>
+                  </div>
+                  <div class="widget-">
+                    <div class="chart-container">
+                      <canvas id="barChart"></canvas>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script src="assets/js/chart.js"></script>
+    <script src="assets/js/index.js"></script>
+  </body>
+</html>

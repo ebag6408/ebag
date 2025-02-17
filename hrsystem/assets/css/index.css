@@ -1,0 +1,135 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Arial", sans-serif;
+}
+body {
+  display: flex;
+  min-height: 100vh;
+  background: #ebe4fb;
+}
+ul,
+li,
+ol {
+  list-style: none;
+}
+.container {
+  width: 100%;
+  display: flex;
+}
+/* 사이드바 */
+.sidebar {
+  position: sticky;
+  top: 0;
+  width: 250px;
+  height: 100vh;
+  background: #ebe4fb;
+  color: #555353;
+  padding: 20px;
+}
+.sidebar_item {
+  height: 100%;
+}
+.sidebar_item .sidebar_box {
+  height: 100%;
+}
+.sidebar ul {
+  flex: 1; /* 남은 공간 모두 차지 */
+  overflow-y: auto; /* 메뉴 아이템이 많을 경우 해당 영역만 스크롤 */
+  padding-bottom: 60px;
+}
+.sidebar ul li {
+  padding: 10px;
+  color: #555353;
+}
+.sidebar ul li a {
+  text-decoration: none;
+  color: #5a4181;
+}
+.sidebar h2 {
+  color: #5a4181;
+  margin-bottom: 20px;
+}
+.sidebar_box .menu {
+  height: calc(100% - 60px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.sidebar_box .settings {
+  padding-bottom: 10px;
+}
+
+/* profile */
+.user-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  color: #5a4181;
+}
+/* 사이드바 */
+.sidebar {
+  position: sticky;
+  top: 0;
+  width: 250px;
+  height: 100vh;
+  background: #ebe4fb;
+  color: #555353;
+  padding: 20px;
+}
+.sidebar_item {
+  height: 100%;
+}
+.sidebar_item .sidebar_box {
+  height: 100%;
+}
+.sidebar ul {
+  flex: 1; /* 남은 공간 모두 차지 */
+  overflow-y: auto; /* 메뉴 아이템이 많을 경우 해당 영역만 스크롤 */
+  padding-bottom: 60px;
+}
+.sidebar ul li {
+  padding: 10px;
+  color: #555353;
+}
+.sidebar ul li a {
+  text-decoration: none;
+  color: #5a4181;
+}
+.sidebar h2 {
+  color: #5a4181;
+  margin-bottom: 20px;
+}
+.sidebar_box .menu {
+  height: calc(100% - 60px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.sidebar_box .settings {
+  padding-bottom: 10px;
+}
+
+/* profile */
+.user-info {
+  display: flex;
+  flex-direction: column;
+  align-items: normal;
+  gap: 10px;
+  padding: 10px;
+  color: #5a4181;
+  border-radius: 10px;
+  background: #cdbfdd;
+  margin-bottom: 25px;
+}
+.user-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.user-text {
+  font-size: 14px;
+  text-align: justify;
+}
