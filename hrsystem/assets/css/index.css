@@ -1,0 +1,106 @@
+:root {
+  --bg-color: #ebe4fb;
+  --text-color: #555353;
+  --primary-color: #5a4181;
+  --secondary-bg: #d4c8f5;
+  --card-bg: #fff;
+  --border-color: #eee;
+  --progress-color: #81b29a;
+  --announcement-bg: #fafafa;
+  --highlight-color: #a086e0;
+  --button-bg: var(--primary-color);
+  --button-text: #fff;
+  --icon-color: var(--primary-color);
+}
+/* 도넛 차트와 하이라이트: #A086E0, #81B29A, #FFD166
+프로그레스바와 막대 차트: #FBD4A4, #b8e1a3, #06D6A0, #EF476F */
+
+[data-theme="dark"] {
+  --bg-color: #2c2c2c;
+  --text-color: #ecf0f1; /* 밝은 회색 텍스트 */
+  --primary-color: #5d6d7e; /* 다크 그레이시 블루 */
+  --secondary-bg: #444;
+  --card-bg: #3a3a3a;
+  --border-color: #555;
+  --progress-color: #7a9a92; /* 겨자색 계열 */
+  --announcement-bg: #555;
+  --highlight-color: #7f8c8d; /* 차가운 청록색 */
+  --button-bg: var(--primary-color);
+  --button-text: #fff;
+  --icon-color: #ecf0f1;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Arial", sans-serif;
+}
+
+body {
+  background: var(--bg-color);
+  color: var(--text-color);
+  transition: background 0.5s ease, color 0.5s ease;
+}
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+/* 미디어쿼리 */
+@media (max-width: 1024px) {
+  .sidebar {
+    width: 220px;
+  }
+  .main {
+    margin-left: 220px;
+    width: calc(100% - 220px);
+  }
+}
+
+@media (max-width: 768px) {
+  /* 모바일: 사이드바 숨김 및 전체 콘텐츠 사용 */
+  .container .menu-toggle {
+    display: block;
+  }
+  .main .top-bar {
+    background: none;
+  }
+  .main .top-bar__icons {
+    position: fixed;
+    top: 27px;
+    right: 15px;
+  }
+  .main h2 {
+    position: relative;
+    top: 24px;
+    color: #5a4181;
+    line-height: 40px;
+  }
+  .sidebar {
+    transform: translateX(-100%);
+    /* 반투명 배경: 테마별로 분기 처리 */
+    background: rgba(235, 228, 251, 0.9);
+  }
+  [data-theme="dark"] .sidebar {
+    background: rgba(44, 44, 44, 0.9);
+  }
+  .sidebar.open {
+    transform: translateX(0);
+  }
+  .main {
+    margin-left: 0 !important;
+    width: 100% !important;
+  }
+  /* 모바일: 카드 레이아웃 1열, 차트 크기 조정 */
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+  .chart-container {
+    height: 180px;
+  }
+  .chart-container-bar {
+    height: 250px;
+  }
+}

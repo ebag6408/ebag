@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+	<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Xanh+Mono:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<!-- 
+    font-family: 'Playfair Display', serif;
+    font-family: 'Alegreya Sans', sans-serif;
+    font-family: 'Xanh Mono', monospace;
+    font-family: 'Work Sans', sans-serif;
+-->
+    <title>fourseasons</title>
+    <!-- 
+        메인 컬러
+        rgb(245, 246, 242)
+        rgb(231, 230, 220)
+        rgb(204, 195, 182)
+        rgb(189, 182, 170)
+        rgb(133, 131, 123)
+    -->
+    <link rel="stylesheet" href="com.css">
+	<!-- <link rel="stylesheet" href="index.css">   -->
+    <style>
+
+
+    .section1{padding-bottom:120px;padding-top: 100px;}
+    .section1 .container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    column-gap:30px;
+    row-gap:50px
+    }
+    .section1 .section-title h3{font-size: 14px;font-weight: 500;}
+    .section1 .item{}
+    .section1 .img-box{}
+    .section1 .img-box img{width:100%;}
+    .section1 .img-box .bg{
+        position: absolute;top: 0;left: 0;
+        opacity: 0;transition: 0.5s;
+        background-color: rgba(255, 255, 255, 0.5);
+        width:100%;height: 100%;}
+    .section1 .img-box:hover .bg{opacity: 1;}
+
+    .section1 .text-box{font-family: 'Alegreya Sans', sans-serif;}
+    .section1 .text-box h5{
+        height: 30px;
+        font-size: 20px;
+        font-weight: 900;
+        text-transform: uppercase;
+        color:var(--six);
+    }
+    .section1 .text-box p{
+        height: 120px;
+        font-size: 12px;
+        font-weight:500 ;
+    }
+
+    .section1 .btn-box{
+        font-size: 14px ;
+        display: flex;gap: 10px;}
+    .section1 .btn1{
+        padding-top: 10px;
+        width: 100px;height: 30px;
+        text-align: center;
+        font-weight: 700;
+        background-color:var(--eight);
+        color: white;
+        border: 1px solid var(--eight)}
+    .section1 .btn2{
+        padding-top: 10px;
+        width: 100px;height: 30px;
+        text-align: center;
+        font-weight: 700;
+        border: 1px solid var(--eight)}
+
+
+    @media (max-width:1200px){
+        .section1 .container{grid-template-columns: repeat(2,1fr);}
+        
+    }
+    @media (max-width:800px){
+        .section1 .container{grid-template-columns: repeat(1,1fr);}
+    }
+
+
+    </style>
+</head>
+<body>
+    <div class="top-btn">top</div>
+    <header>
+        <div class="logo">
+            <a href="index.html"><img src="img/header-logo.png" alt=""></a>
+        </div>
+        <ul class="gnb">
+            <li class="gnb-li"><a href="index.html">summary</a></li>
+            <li class="gnb-li"><a href="1-guestroom.html">guest room</a></li>
+            <li class="gnb-li"><a href="2-dining.html">dining</a></li>
+            <li class="gnb-li"><a href="3-spa.html">spa</a></li>
+            <li class="gnb-li"><a href="4-apathtovisit.html">a path to visit</a></li>
+        </ul>
+        <div class="right">
+            <div class="ham-btn">
+                <div class="bar bar1"></div>
+                <div class="bar bar2"></div>
+                <div class="bar bar3"></div>
+                <ul class="sub">
+                    <li class="sub-li"><a href="index.html">summary</a></li>
+                    <li class="sub-li"><a href="1-guestroom.html">guest room</a></li>
+                    <li class="sub-li"><a href="2-dining.html">dining</a></li>
+                    <li class="sub-li"><a href="3-spa.html">spa</a></li>
+                    <li class="sub-li"><a href="4-apathtovisit.html">a path to visit</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <section class="sub-main">
+        <div class="img-box">
+            <img src="img/main-room.jpg">
+            <div class="bg">
+                <div class="text-box">
+                    <h1>guest room</h1>
+                </div></div>
+        </div>
+    </section>
+    <!-- 1111111111111 -->
+    <section class="section1">
+        <div class="section-title">
+            <h3>
+                <a href="index.html">home/</a>
+                <a href="#">room/</a>
+                <a href="#">overview</a>
+            </h3>
+            <h1>guest room</h1>
+        </div>
+        <div class="container">
+            <div class="item item1">
+                <div class="img-box">
+                    <img src="img/3-1deluxe.jpg">
+                    <div class="bg"></div>
+                </div>
+                <div class="text-box">
+                    <h5>디럭스 룸</h5>
+                    <p>침대타입: 킹베드 1개, 유아용 침대 1개<br>
+                    크기: 41 ~ 45m² (441.3 ~ 484.4 sq.ft.)<br>
+                    인원: 성인 2명 또는 성인 2명과 유아 1명</p>
+                    <div class="btn-box">
+                        <div class="btn btn1">객실요금확인</div>
+                        <div class="btn btn2">자세한내용</div>
+                    </div>
+                </div>
+            </div>
+            <div class="item item2">
+                <div class="img-box">
+                    <img src="img/3-2Premiere.jpg">
+                    <div class="bg"></div>
+                </div>
+                <div class="text-box">
+                    <h5>프리미어 룸</h5>
+                    <p>
+                        침대타입: 킹 베드 1개 또는 더블 베드 2개, 간이 침대 1개* 또는 유아용 침대 1개 (*간이 침대는 킹 베드 객실에만 한함. 별도의 이용 요금이 발생합니다.)<br>
+                    
+                        크기: 45 ~ 48m² (484.4 ~ 516.7 sq.ft.)<br>
+                    
+                        인원: 킹 베드: 성인 2명, 또는 성인 2명과 아기 1명 / 더블 베드: 성인 2명, 또는 성인 2명과 유아 2명</p>
+                        
+                    <div class="btn-box">
+                        <div class="btn btn1">객실요금확인</div>
+                        <div class="btn btn2">자세한내용</div>
+                    </div>
+                </div>
+            </div>
+            <div class="item item3">
+                <div class="img-box">
+                    <img src="img/3-3Premiere family.jpg">
+                    <div class="bg"></div>
+                </div>
+                <div class="text-box">
+                    <h5>프리미어 패밀리 룸</h5>
+                    <p>
+                        침대타입: 킹 베드 1개, 소파 베드 1개<br>
+                        크기: 48m² (517 sq.ft.)<br>
+                        인원: 성인 3명, 또는 성인 2명과 유아 2명</p>
+                        <div class="btn-box">
+                            <div class="btn btn1">객실요금확인</div>
+                            <div class="btn btn2">자세한내용</div>
+                        </div>
+                </div>
+            </div>
+            <div class="item item4">
+                <div class="img-box">
+                    <img src="img/3-4corner Premiere.jpg">
+                    <div class="bg"></div>
+                </div>
+                <div class="text-box">
+                    <h5>코너 프리미어 룸</h5>
+                    <p>침대타입: 킹베드, 유아용 침대 1개<br>
+                        크기: 56m² (602.77 sq.ft.)<br>
+                        인원: 성인 2명 또는 성인 2명과 유아 1명</p>
+                    <div class="btn-box">
+                        <div class="btn btn1">객실요금확인</div>
+                        <div class="btn btn2">자세한내용</div>
+                    </div>
+                </div>
+            </div>
+            <div class="item item5">
+                <div class="img-box">
+                    <img src="img/3-5disabled person  exclusive deluxe.jpg">
+                    <div class="bg"></div>
+                </div>
+                <div class="text-box">
+                    <h5>장애인 전용 디럭스 룸</h5>
+                    <p>
+                        침대타입: 킹 베드 1개 또는 더블 베드 2개, 유아용 침대 1개 또는 소파 베드 1개 (더블 베드 2개가 있는 객실은 유아용 침대만 가능)<br>
+                        크기: 44m² (473.6 sq.ft.)<br>
+                        인원: 성인 2명, 또는 성인 2명과 어린이 1명</p>
+                    <div class="btn-box">
+                        <div class="btn btn1">객실요금확인</div>
+                        <div class="btn btn2">자세한내용</div>
+                    </div>
+                </div>
+            </div>
+            <div class="item item6">
+                <div class="img-box">
+                    <img src="img/3-6grand family.jpg">
+                    <div class="bg"></div>
+                </div>
+                <div class="text-box">
+                    <h5>그랜드 패밀리 룸</h5>
+                    <p>침대타입: 킹 베드 1개 또는 더블 베드 2개, 간이 침대 1개* 또는 유아용 침대 1개 (*간이 침대는 킹 베드 객실에만 한함. 별도의 이용 요금이 발생합니다.)<br>
+                        크기: 75m² (807.3 sq.ft.)<br>
+                        인원: 킹 베드: 성인 3명 / 더블 베드 2개: 성인 3명, 또는 성인 2명과 유아 2명</p>
+                    
+                    <div class="btn-box">
+                        <div class="btn btn1">객실요금확인</div>
+                        <div class="btn btn2">자세한내용</div>
+                    </div>
+                </div>
+            </div>
+            <div class="item item7">
+                <div class="img-box">
+                    <img src="img/3-7club room.jpg">
+                    <div class="bg"></div>
+                </div>
+                <div class="text-box">
+                    <h5>클럽 룸</h5>
+                    <p>
+                        침대타입: 킹 베드 1개 또는 더블 베드 2개, 간이 침대 1개* 또는 유아용 침대 1개 (*간이 침대는 킹 베드 객실에만 한함. 별도의 이용 요금이 발생합니다.)<br>
+                        크기: 44m² (473.6 sq.ft.)<br>
+                        인원: 킹 베드: 성인 2명, 또는 성인 2명과 아기 1명 / 더블 베드 2개: 성인 2명과 유아 2명</p>
+                    
+                    <div class="btn-box">
+                        <div class="btn btn1">객실요금확인</div>
+                        <div class="btn btn2">자세한내용</div>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+
+    <footer class="footer1">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html"><img src="img/footer-logo.png"></a>
+            </div>
+            <div class="item-box">
+                <div class="item item1">
+                    <ul>
+                        <li>소개</li>
+                        <li><a href="#">포시즌스에 대하여</a></li>
+                        <li><a href="#">포시즌스 채용</a></li>
+                        <li><a href="#">연락처</a></li>
+                    </ul>
+                </div>
+                <div class="item item2">
+                        <li>예약</li>
+                        <li><a href="#">송장 요청</a></li>
+                        <li><a href="#">예약 확인</a></li>
+                        <li><a href="#">연회 & 이벤트</a></li>
+                </div>
+                <div class="item item3">
+                        <li>최신 소식</li>
+                        <li><a href="#">포시즌스 프레스룸</a></li>
+                        <li><a href="#">포시즌스 매거진</a></li>
+                </div>
+                <div class="item item4">
+                        <li>더보기</li>
+                        <li><a href="#">레지던스 찾기</a></li>
+                        <li><a href="#">기프트 카드 구매</a></li>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <footer class="footer2">
+        <div class="container">
+            <div class="item item1">
+                <div class="icon-box">
+                    <a href="#"><img src="img/icon-twit.png"></a>
+                    <a href="#"><img src="img/icon-face.png"></a>
+                    <a href="#"><img src="img/icon-insta.png"></a>
+                    <a href="#"><img src="img/icon-youtube.png"></a>
+                </div>
+                <div class="text-box">
+                    <select class="lang" placeholder="">
+                        <option >한국어</option>
+                        <option >영어</option>
+                    </select>
+                </div>
+            </div>
+            <div class="item item2">
+                <ul class="shop-menu1">
+                    <li><a href="#">법적고지</a></li>
+                    <li><a href="#">개인정보 취급방침</a></li>
+                    <li><a href="#">쿠키 환경설정</a></li>
+                    <li><a href="#">접근성 정책</a></li>
+                </ul>
+                <ul class="shop-menu2">
+                    <li>ⓒFour Seasons Hotels Limited 1997-2022. All Rights Reserved</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+<script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+<script>
+    
+    var sc_top
+    header()
+    $(window).scroll(function(){
+        header()
+    })
+    function header(){
+        sc_top=$(window).scrollTop()
+        console.log(sc_top)
+        if(sc_top>100){
+            $("header").addClass("s-down")
+        }else{
+            $("header").removeClass("s-down")
+        }
+    }
+    
+    $(".ham-btn").click(function(){
+        $("header").toggleClass("on")
+    })
+    var sc_top
+    btn_top()
+    $(window).scroll(function(){
+        btn_top()
+    })
+    function btn_top(){
+        sc_top = $(window).scrollTop()
+        console.log("스크롤탑: "+ sc_top)
+        if(sc_top < 100){
+            $(".top-btn").css({opacity:0})
+        }else{
+            $(".top-btn").css({opacity:1})
+        }
+    }
+    $(".top-btn").click(function(){
+        $("html,body").stop().animate({scrollTop:0})
+    })
+</script>
+
+</html>
