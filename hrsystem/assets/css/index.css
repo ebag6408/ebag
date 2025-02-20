@@ -1,135 +1,90 @@
+:root {
+  --bg-color: #ebe4fb;
+  --text-color: #555353;
+  --primary-color: #5a4181;
+  --secondary-bg: #d4c8f5;
+  --card-bg: #fff;
+  --border-color: #eee;
+  --progress-color: #b8e1a3;
+  --announcement-bg: #fafafa;
+  --highlight-color: #fbd4a4;
+  --button-bg: var(--primary-color);
+  --button-text: #fff;
+  --icon-color: var(--primary-color);
+}
+
+[data-theme="dark"] {
+  --bg-color: #2c2c2c;
+  --text-color: #eaeaea;
+  --primary-color: #9b59b6;
+  --secondary-bg: #444;
+  --card-bg: #3a3a3a;
+  --border-color: #555;
+  --progress-color: #8e44ad;
+  --announcement-bg: #555;
+  --highlight-color: #a569bd;
+  --button-bg: var(--primary-color);
+  --button-text: #fff;
+  --icon-color: #eaeaea;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Arial", sans-serif;
 }
+
 body {
-  display: flex;
-  min-height: 100vh;
-  background: #ebe4fb;
+  background: var(--bg-color);
+  color: var(--text-color);
+  transition: background 0.5s ease, color 0.5s ease;
 }
 ul,
-li,
-ol {
+ol,
+li {
   list-style: none;
 }
-.container {
-  width: 100%;
-  display: flex;
-}
-/* 사이드바 */
-.sidebar {
-  position: sticky;
-  top: 0;
-  width: 250px;
-  height: 100vh;
-  background: #ebe4fb;
-  color: #555353;
-  padding: 20px;
-}
-.sidebar_item {
-  height: 100%;
-}
-.sidebar_item .sidebar_box {
-  height: 100%;
-}
-.sidebar ul {
-  flex: 1; /* 남은 공간 모두 차지 */
-  overflow-y: auto; /* 메뉴 아이템이 많을 경우 해당 영역만 스크롤 */
-  padding-bottom: 60px;
-}
-.sidebar ul li {
-  padding: 10px;
-  color: #555353;
-}
-.sidebar ul li a {
-  text-decoration: none;
-  color: #5a4181;
-}
-.sidebar h2 {
-  color: #5a4181;
-  margin-bottom: 20px;
-}
-.sidebar_box .menu {
-  height: calc(100% - 60px);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-.sidebar_box .settings {
-  padding-bottom: 10px;
+
+/* 미디어쿼리 */
+@media (max-width: 1024px) {
+  .sidebar {
+    width: 220px;
+  }
+  .main {
+    margin-left: 220px;
+    width: calc(100% - 220px);
+  }
 }
 
-/* profile */
-.user-info {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-  color: #5a4181;
-}
-/* 사이드바 */
-.sidebar {
-  position: sticky;
-  top: 0;
-  width: 250px;
-  height: 100vh;
-  background: #ebe4fb;
-  color: #555353;
-  padding: 20px;
-}
-.sidebar_item {
-  height: 100%;
-}
-.sidebar_item .sidebar_box {
-  height: 100%;
-}
-.sidebar ul {
-  flex: 1; /* 남은 공간 모두 차지 */
-  overflow-y: auto; /* 메뉴 아이템이 많을 경우 해당 영역만 스크롤 */
-  padding-bottom: 60px;
-}
-.sidebar ul li {
-  padding: 10px;
-  color: #555353;
-}
-.sidebar ul li a {
-  text-decoration: none;
-  color: #5a4181;
-}
-.sidebar h2 {
-  color: #5a4181;
-  margin-bottom: 20px;
-}
-.sidebar_box .menu {
-  height: calc(100% - 60px);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-.sidebar_box .settings {
-  padding-bottom: 10px;
-}
-
-/* profile */
-.user-info {
-  display: flex;
-  flex-direction: column;
-  align-items: normal;
-  gap: 10px;
-  padding: 10px;
-  color: #5a4181;
-  border-radius: 10px;
-  background: #cdbfdd;
-  margin-bottom: 25px;
-}
-.user-img {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.user-text {
-  font-size: 14px;
-  text-align: justify;
+@media (max-width: 768px) {
+  /* 모바일: 사이드바 숨김 및 전체 콘텐츠 사용 */
+  .menu-toggle {
+    display: block;
+  }
+  .sidebar {
+    transform: translateX(-100%);
+    /* 반투명 배경: 테마별로 분기 처리 */
+    background: rgba(235, 228, 251, 0.9);
+  }
+  [data-theme="dark"] .sidebar {
+    background: rgba(44, 44, 44, 0.9);
+  }
+  .sidebar.open {
+    transform: translateX(0);
+  }
+  .main {
+    margin-left: 0 !important;
+    width: 100% !important;
+  }
+  /* 모바일: 카드 레이아웃 1열, 차트 크기 조정 */
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+  .chart-container {
+    height: 180px;
+  }
+  .chart-container-bar {
+    height: 250px;
+  }
 }
