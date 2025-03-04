@@ -1,17 +1,17 @@
 document.addEventListener("DOMContentLoaded", () => {
   // 색상 세트 정의 (라이트/다크 모드)
   const barColorsLight = {
-    project: "#b8e1a3", // 연두색
-    product: "#FBD4A4", // 노란색
+    project: "#A86AB3",
+    product: "#C8B4D9",
   };
 
   const barColorsDark = {
-    project: "#81B29A", // 그린 계열
-    product: "#FFD166", // 따뜻한 노란색
+    project: "#7c3aed",
+    product: "#a16ae8",
   };
 
-  const doughnutColorsLight = ["#F4C2C2", "#b8e1a3"]; // 라이트 모드에서의 색상
-  const doughnutColorsDark = ["#FF8A80", "#80CBC4"]; // 다크 모드에서의 색상 (따뜻한 핑크와 청록색)
+  const doughnutColorsLight = ["#A86AB3", "#C8B4D9"]; // 라이트 모드에서의 색상
+  const doughnutColorsDark = ["#7c3aed", "#a16ae8"]; // 다크 모드에서의 색상 (따뜻한 핑크와 청록색)
 
   // 현재 테마에 따른 색상 선택 함수
   const getBarColors = () => {
@@ -63,6 +63,10 @@ document.addEventListener("DOMContentLoaded", () => {
           {
             data: [10, 5],
             backgroundColor: currentDoughnutColors,
+            datalabels: {
+              anchor: "center",
+              align: "center",
+            },
           },
         ],
       },
@@ -71,7 +75,15 @@ document.addEventListener("DOMContentLoaded", () => {
         maintainAspectRatio: false,
         cutout: "60%",
         plugins: {
-          legend: { position: "bottom" },
+          legend: {
+            position: "right",
+            labels: {
+              usePointStyle: false,
+              boxWidth: 20,
+              boxHeight: 20,
+              useBorderRadius: 20,
+            },
+          },
         },
       },
     });

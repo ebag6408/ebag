@@ -141,7 +141,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: var(--secondary-bg);
   padding: 15px;
   border-radius: 10px;
   margin-bottom: 20px;

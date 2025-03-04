@@ -5,9 +5,9 @@
   --secondary-bg: #d4c8f5;
   --card-bg: #fff;
   --border-color: #eee;
-  --progress-color: #81b29a;
+  --progress-color: #a86ab3;
   --announcement-bg: #fafafa;
-  --highlight-color: #a086e0;
+  --highlight-color: var(--primary-color);
   --button-bg: var(--primary-color);
   --button-text: #fff;
   --icon-color: var(--primary-color);
@@ -22,9 +22,9 @@
   --secondary-bg: #444;
   --card-bg: #3a3a3a;
   --border-color: #555;
-  --progress-color: #7a9a92; /* 겨자색 계열 */
+  --progress-color: #a16ae8;
   --announcement-bg: #555;
-  --highlight-color: #7f8c8d; /* 차가운 청록색 */
+  --highlight-color: var(--primary-color); /* 차가운 청록색 */
   --button-bg: var(--primary-color);
   --button-text: #fff;
   --icon-color: #ecf0f1;
@@ -48,6 +48,9 @@ li {
   list-style: none;
 }
 
+h2 {
+  color: var(--primary-color);
+}
 /* 미디어쿼리 */
 @media (max-width: 1024px) {
   .sidebar {
