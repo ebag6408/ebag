@@ -71,19 +71,14 @@ document.addEventListener("DOMContentLoaded", () => {
         ],
       },
       options: {
-        responsive: true,
-        maintainAspectRatio: false,
-        cutout: "60%",
+        borderWidth: 0,
+        cutout: "80%",
+        circumference: "270",
+        rotation: 225,
+        borderRadius: 1000,
+        spacing: -2,
         plugins: {
-          legend: {
-            position: "right",
-            labels: {
-              usePointStyle: false,
-              boxWidth: 20,
-              boxHeight: 20,
-              useBorderRadius: 20,
-            },
-          },
+          legend: { position: "bottom", boxWidth: 20 },
         },
       },
     });
@@ -126,10 +121,8 @@ document.addEventListener("DOMContentLoaded", () => {
   function updateBarChartColors() {
     if (barChartInstance) {
       const newColors = getBarColors();
-      // 데이터셋의 색상 업데이트
       barChartInstance.data.datasets[0].backgroundColor = newColors.project;
       barChartInstance.data.datasets[1].backgroundColor = newColors.product;
-      // 차트 새로 렌더링
       barChartInstance.update();
     }
   }
@@ -138,10 +131,79 @@ document.addEventListener("DOMContentLoaded", () => {
   function updateDoughnutChartColors() {
     if (doughnutChartInstance) {
       const newColors = getDoughnutColors();
-      // 도넛 차트 색상 업데이트
       doughnutChartInstance.data.datasets[0].backgroundColor = newColors;
-      // 차트 새로 렌더링
       doughnutChartInstance.update();
     }
   }
+
+  // SortableJS 라이브러리 추가 (CDN)
+  const loadSortableJS = () => {
+    const script = document.createElement("script");
+    script.src =
+      "https://cdn.jsdelivr.net/npm/sortablejs@1.14.0/Sortable.min.js";
+    script.onload = enableDragAndDrop;
+    document.head.appendChild(script);
+  };
+
+  // 드래그앤드롭 활성화 함수
+  const enableDragAndDrop = () => {
+    const dashboardGrid = document.querySelector(".dashboard-grid");
+    new Sortable(dashboardGrid, {
+      animation: 150,
+      ghostClass: "dragging",
+    });
+  };
+
+  // DOM 로드 후 라이브러리 불러오기
+  loadSortableJS();
+});
+
+//드앤드 스타일수정
+document.addEventListener("DOMContentLoaded", () => {
+  const dashboardGrid = document.querySelector(".dashboard-grid");
+
+  Sortable.create(dashboardGrid, {
+    animation: 300, // 애니메이션 지속 시간 증가
+    ghostClass: "sortable-ghost", // 드래그 중 스타일 클래스
+    dragClass: "sortable-drag", // 드래그하는 동안 적용되는 클래스
+    chosenClass: "sortable-chosen", // 선택된 상태의 클래스
+  });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const notifications = document.querySelectorAll(".notification");
+  let currentIndex = 0;
+
+  function updateNotifications() {
+    notifications.forEach((noti, index) => {
+      if (index === currentIndex) {
+        noti.classList.add("active");
+        noti.classList.remove("inactive");
+      } else {
+        noti.classList.add("inactive");
+        noti.classList.remove("active");
+      }
+    });
+  }
+
+  // 마우스 휠로 전환
+  document
+    .querySelector(".notifications")
+    .addEventListener("wheel", (event) => {
+      if (event.deltaY > 0) {
+        currentIndex = (currentIndex + 1) % notifications.length;
+      } else {
+        currentIndex =
+          (currentIndex - 1 + notifications.length) % notifications.length;
+      }
+      updateNotifications();
+    });
+
+  // 일정 시간마다 자동 변경 (3초마다)
+  setInterval(() => {
+    currentIndex = (currentIndex + 1) % notifications.length;
+    updateNotifications();
+  }, 3000);
+
+  updateNotifications();
 });

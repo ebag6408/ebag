@@ -226,3 +226,81 @@
   border-radius: 4px;
   transition: background 0.3s, border-color 0.3s;
 }
+/* 드래그 중인 요소 스타일 */
+.sortable-drag {
+  opacity: 0.8;
+  transform: scale(1.05);
+  transition: transform 0.2s ease;
+}
+
+/* 드래그 후 원래 위치로 돌아가는 애니메이션 */
+.sortable-ghost {
+  opacity: 0.5;
+  background: rgba(170, 170, 170, 0.2);
+  border: 2px dashed #bbb;
+}
+
+/* 드래그할 때 선택된 요소 스타일 */
+.sortable-chosen {
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.notification-widget {
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 10px;
+  width: 350px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+}
+
+.notifications {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: relative;
+}
+
+.notification {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  border-radius: 8px;
+  transition: all 0.8s ease-in-out;
+}
+
+.date {
+  background: var(--primary-color);
+  color: white;
+  padding: 8px;
+  border-radius: 5px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.date .day {
+  font-size: 20px;
+  display: block;
+}
+
+.message {
+  background: white;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  font-size: 14px;
+}
+
+/* 현재 진행 중인 알림 강조 */
+.notification.active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.notification.inactive {
+  opacity: 0.5;
+  transform: scale(0.95);
+}
